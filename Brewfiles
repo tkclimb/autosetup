@@ -1,0 +1,28 @@
+# tap repositories and their packages
+
+## tap
+tap caskroom/cask
+tap homebrew/binary
+tap homebrew/versions
+
+# package
+brew openssl
+brew wget
+brew zsh
+brew zsh-completions
+brew tmux
+brew neovim/neovim/neovim
+
+# cask
+cask google-japanese-ime
+cask iterm2
+cask karabina
+cask alfred
+cask frantz
+cask dropbox
+cask kindle
+
+# appstore
+appstore 1password
+appstore The Unarchiver
+# appstore Xcode
