@@ -5,6 +5,7 @@ tap homebrew/versions
 
 # package
 brew openssl
+brew ghq
 brew wget
 brew zsh
 brew zsh-completions
@@ -14,9 +15,9 @@ brew neovim/neovim/neovim
 # cask
 cask google-japanese-ime
 cask iterm2
-cask karabina
+cask karabiner
 cask alfred
-cask frantz
+cask franz
 cask dropbox
 cask kindle
 
