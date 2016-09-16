@@ -1,5 +1,3 @@
-# tap repositories and their packages
-
 ## tap
 tap caskroom/cask
 tap homebrew/binary
