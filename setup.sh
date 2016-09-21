@@ -28,9 +28,8 @@ rbenv global $RUBY_VERSION
 rbenv rehash
 
 # remove cache
-ghq get git@github.com:tkclimb/autosetup.git
+ghq get http://github.com:tkclimb/autosetup.git
 rm -rf `pwd`
 
 # set symlink at home
 ln -sf `ghq root`/`ghq list autosetup`/Brewfile
-
