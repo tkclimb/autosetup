@@ -13,7 +13,24 @@ fi
 # brew bundle
 brew bundle
 
-# finish
+
+# python
+PYTHON2_VERSION=2.7.12
+PYTHON3_VERSION=3.5.2
+pyenv install $PYTHON2_VERSION
+pyenv install $PYTHON3_VERSION
+pyenv global $PYTHON2_VERSION $PYTHON3_VERSION
+pyenv rehash
+
+RUBY_VERSION=2.3.1
+rbenv install $RUBY_VERSION
+rbenv global $RUBY_VERSION
+rbenv rehash
+
+# remove cache
 ghq get git@github.com:tkclimb/autosetup.git
-mv `pwd`
+rm -rf `pwd`
+
+# set symlink at home
+ln -sf `ghq root`/`ghq list autosetup`/Brewfile
 

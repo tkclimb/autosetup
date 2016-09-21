@@ -6,14 +6,18 @@ tap 'neovim/neovim'
 # package
 brew 'cask'
 brew 'mas'
+brew 'zsh', args: [ 'disable-etcdir' ]
+brew 'pyenv'
+brew 'rbenv'
 brew 'openssl'
 brew 'ghq'
 brew 'wget'
-brew 'zsh'
-brew 'zsh-completions'
 brew 'tmux'
 brew 'reattach-to-user-namespace'
 brew 'neovim'
+brew 'verilator'
+brew 'ctags'
+brew 'ag'
 
 # cask
 cask 'google-japanese-ime'
@@ -36,8 +40,16 @@ cask 'the-unarchiver'
 cask 'insomniax'
 cask 'fantastical'
 cask 'appcleaner'
+cask 'parallels-desktop'
+cask 'hyperswitch'
+cask 'skim'
+cask 'vlc'
+cask 'anytrans'
 
 # appstore
-# mas '1Password', id: 443987910 
+# mas '1Password', id: 443987910
 # mas 'Xcode', id: 497799835
-mas 'Quiver', id: 866773894 
+mas 'Quiver', id: 866773894
+mas 'Dash3', id: 449589707
+mas 'Fantastical2', id: 975937182
+
