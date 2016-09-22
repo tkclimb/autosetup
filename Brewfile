@@ -38,13 +38,13 @@ cask 'ipartition'
 cask 'xtrafinder'
 cask 'the-unarchiver'
 cask 'insomniax'
-cask 'fantastical'
 cask 'appcleaner'
 cask 'parallels-desktop'
 cask 'hyperswitch'
 cask 'skim'
 cask 'vlc'
 cask 'anytrans'
+cask 'utorrent'
 
 # appstore
 # mas '1Password', id: 443987910
