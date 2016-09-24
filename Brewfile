@@ -7,6 +7,7 @@ tap 'neovim/neovim'
 brew 'cask'
 brew 'mas'
 brew 'zsh', args: [ 'disable-etcdir' ]
+brew 'gcc'
 brew 'pyenv'
 brew 'rbenv'
 brew 'openssl'
@@ -44,7 +45,7 @@ cask 'hyperswitch'
 cask 'skim'
 cask 'vlc'
 cask 'anytrans'
-cask 'utorrent'
+cask 'amazon-music'
 
 # appstore
 # mas '1Password', id: 443987910
