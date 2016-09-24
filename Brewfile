@@ -45,7 +45,8 @@ cask 'hyperswitch'
 cask 'skim'
 cask 'vlc'
 cask 'anytrans'
-cask 'amazon-music'
+cask 'night-owl'
+# cask 'amazon-music'
 
 # appstore
 # mas '1Password', id: 443987910
