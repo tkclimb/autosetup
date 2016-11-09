@@ -13,6 +13,14 @@ fi
 # brew bundle
 brew bundle
 
+# anyenv
+if [ ! -e $HOME/.anyenv ]; then
+  git clone https://github.com/riywo/anyenv $HOME/.anyenv
+  export PATH=$HOME/.anyenv/bin:$PATH
+  eval "$(anyenv init -)"
+fi
+anyenv install pyenv
+anyenv install rbenv
 
 # python
 PYTHON2_VERSION=2.7.12
@@ -21,6 +29,7 @@ pyenv install $PYTHON2_VERSION
 pyenv install $PYTHON3_VERSION
 pyenv global $PYTHON2_VERSION $PYTHON3_VERSION
 pyenv rehash
+
 
 RUBY_VERSION=2.3.1
 rbenv install $RUBY_VERSION

@@ -2,12 +2,14 @@ cask_args appdir: '/Applications'
 
 # tap
 tap 'neovim/neovim'
+tap 'sanemat/font'
 
 # package
 brew 'cask'
 brew 'mas'
 brew 'zsh', args: [ 'disable-etcdir' ]
 brew 'gcc'
+brew 'gdb'
 brew 'pyenv'
 brew 'rbenv'
 brew 'openssl'
@@ -19,10 +21,17 @@ brew 'neovim'
 brew 'verilator'
 brew 'ctags'
 brew 'ag'
+brew 'ricty', args: ['vim-powerline', 'powerline']
+brew 'llvm', args: ['with-clang']
+brew 'nkf'
+brew 'qemu'
 
 # cask
+cask 'java' unless system '/usr/libexec/java_home --failfast'
+cask 'Caskroom/versions/java7'
 cask 'google-japanese-ime'
 cask 'google-chrome'
+cask 'google-drive'
 cask 'google-photos-backup'
 cask 'iterm2'
 cask 'karabiner'
@@ -32,8 +41,8 @@ cask 'dropbox'
 cask 'kindle'
 cask 'dash'
 cask 'bettertouchtool'
-cask 'popclip'
 cask 'virtualbox'
+cask 'virtualbox-extension-pack'
 cask 'vagrant'
 cask 'ipartition'
 cask 'xtrafinder'
@@ -42,16 +51,26 @@ cask 'insomniax'
 cask 'appcleaner'
 cask 'parallels-desktop'
 cask 'hyperswitch'
+cask 'imageoptim'
+cask 'avira-antivirus'
 cask 'skim'
 cask 'vlc'
 cask 'anytrans'
 cask 'night-owl'
-# cask 'amazon-music'
+cask 'amazon-music'
+cask 'amazon-drive'
+cask 'forklift'
+cask 'bathyscaphe'
+cask 'contexts'
+cask 'slack'
 
 # appstore
 # mas '1Password', id: 443987910
 # mas 'Xcode', id: 497799835
 mas 'Quiver', id: 866773894
-mas 'Dash3', id: 449589707
 mas 'Fantastical2', id: 975937182
+mas 'LINE', id: 539883307
+mas 'Memory Cleaner X', id: 518830108
+mas 'PopClip', id: 445189367
+mas 'まるごと英和検索 for 英辞郎', id: 919856506
 
