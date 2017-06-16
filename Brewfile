@@ -5,6 +5,8 @@ tap 'homebrew/versions'
 tap 'neovim/neovim'
 tap 'sanemat/font'
 tap 'universal-ctags/universal-ctags'
+tap 'homebrew/fuse'
+tap 'homebrew/science'
 
 # package
 brew 'libtermkey'
@@ -18,11 +20,13 @@ brew 'mas'
 brew 'zsh', args: [ 'disable-etcdir' ]
 brew 'gdb'
 brew 'pyenv'
+brew 'pyenv-virtualenv'
 brew 'rbenv'
 brew 'openssl'
 brew 'ghq'
 brew 'wget'
 brew 'tmux'
+brew 'htop'
 brew 'reattach-to-user-namespace'
 brew 'neovim'
 brew 'verilator'
@@ -31,21 +35,36 @@ brew 'ricty', args: ['vim-powerline', 'powerline']
 brew 'llvm', args: ['with-clang', '--with-libcxx', '--without-assertions', '--with-rtti' ]
 brew 'nkf'
 brew 'qemu'
-brew 'global', args: ['with-pygments']
 brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
+brew 'cscope'
 brew 'doxygen'
 brew 'graphviz'
 brew 'bear'
 brew 'rtags'
 brew 'minicom'
+brew 'binutils'
+brew 'dtc'
+brew 'sshfs'
+brew 'socat'
+brew 'icarus-verilog'
+brew 'bazel'
+brew 'swig'
+brew 'aspell', args: ['--lang=en']
+brew 'tbb'
+brew 'ffmpeg'
+brew 'opencv3', args: ['--with-ffmpeg', '--with-tbb', '--with-python3']
+brew 'golang'
+brew 'libjpeg-turbo'
 
 # cask
+cask 'docker'
 cask 'java' unless system '/usr/libexec/java_home --failfast'
 cask 'Caskroom/versions/java7'
 cask 'google-japanese-ime'
 cask 'google-chrome'
 cask 'google-drive'
 cask 'google-photos-backup'
+cask 'xquartz'
 cask 'iterm2'
 cask 'karabiner'
 cask 'alfred'
@@ -78,6 +97,9 @@ cask 'contexts'
 cask 'slack'
 cask 'key-codes'
 cask 'keyboardcleantool'
+cask 'hammerspoon'
+cask 'eclipse-ide'
+cask 'eclipse-cpp'
 
 # appstore
 # mas '1Password', id: 443987910
@@ -89,4 +111,5 @@ mas 'Memory Cleaner X', id: 518830108
 mas 'PopClip', id: 445189367
 mas 'まるごと英和検索 for 英辞郎', id: 919856506
 mas 'Translate Tab', id:458887729
+mas 'Wunderlist', id: 410628904
 
