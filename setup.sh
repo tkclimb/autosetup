@@ -13,15 +13,6 @@ fi
 # brew bundle
 brew bundle
 
-# anyenv
-if [ ! -e $HOME/.anyenv ]; then
-  git clone https://github.com/riywo/anyenv $HOME/.anyenv
-  export PATH=$HOME/.anyenv/bin:$PATH
-  eval "$(anyenv init -)"
-fi
-anyenv install pyenv
-anyenv install rbenv
-
 # python
 PYTHON2_VERSION=2.7.12
 PYTHON3_VERSION=3.5.2
