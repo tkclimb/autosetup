@@ -18,7 +18,9 @@ PYTHON2_VERSION=2.7.12
 PYTHON3_VERSION=3.5.2
 pyenv install $PYTHON2_VERSION
 pyenv install $PYTHON3_VERSION
-pyenv global $PYTHON2_VERSION $PYTHON3_VERSION
+pyenv virtualenv $PYTHON2_VERSION python2
+pyenv virtualenv $PYTHON3_VERSION python3
+pyenv global python2 python3
 pyenv rehash
 
 
@@ -29,7 +31,17 @@ rbenv rehash
 
 # remove cache
 ghq get http://github.com:tkclimb/autosetup.git
-rm -rf `pwd`
+
+# Setup Ricty
+if [[ PLATFORM_TYPE == darwin ]]; then
+  RICTY_HOME=/usr/local/opt/ricty
+  if [ -d $RICTY_HOME ]; then
+  cp -f $RICTY_HOME/share/fonts/Ricty*.ttf ~/Library/Fonts/
+  fc-cache -vf
+  fi
+fi
 
 # set symlink at home
-ln -sf `ghq root`/`ghq list autosetup`/Brewfile
+# ln -sf `ghq root`/`ghq list autosetup`/Brewfile
+
+echo "Setup done!! Please remove this directory."
