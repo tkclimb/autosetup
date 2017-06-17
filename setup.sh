@@ -1,47 +1,44 @@
-# update
-sudo softwareupdate --install --recommended
+export TK_AUTOSETUP_ROOT="$(cd "$(dirname $1)" && pwd)"
 
-# xcode
-xcode-select --install
+# Set TK_PLATFORM
+case ${OSTYPE} in
+    darwin*)
+      export TK_PLATFORM=darwin
+      ;;
+    linux*)
+      export TK_PLATFORM=linux
+      ;;
+esac
 
-# homebrew
-if [ -e /usr/local/Homebrew ]; then
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if [[ $TK_PLATFORM == darwin ]]; then
+  source osx/setup.sh
+elif [[ $TK_PLATFORM == linux ]]; then
+  source linux/setup.sh
 fi
 
 
-# brew bundle
-brew bundle
-
 # python
-PYTHON2_VERSION=2.7.12
-PYTHON3_VERSION=3.5.2
-pyenv install $PYTHON2_VERSION
-pyenv install $PYTHON3_VERSION
-pyenv virtualenv $PYTHON2_VERSION python2
-pyenv virtualenv $PYTHON3_VERSION python3
+TK_PYTHON2_VERSION=2.7.13
+TK_PYTHON3_VERSION=3.5.3
+pyenv install $TK_PYTHON2_VERSION
+pyenv install $TK_PYTHON3_VERSION
+pyenv virtualenv $TK_PYTHON2_VERSION python2
+pyenv virtualenv $TK_PYTHON3_VERSION python3
 pyenv global python2 python3
 pyenv rehash
 
 
-RUBY_VERSION=2.3.1
-rbenv install $RUBY_VERSION
-rbenv global $RUBY_VERSION
-rbenv rehash
+# TK_RUBY_VERSION=2.3.1
+# rbenv install $TK_RUBY_VERSION
+# rbenv global $TK_RUBY_VERSION
+# rbenv rehash
 
-# remove cache
-ghq get http://github.com:tkclimb/autosetup.git
 
-# Setup Ricty
-if [[ PLATFORM_TYPE == darwin ]]; then
-  RICTY_HOME=/usr/local/opt/ricty
-  if [ -d $RICTY_HOME ]; then
-  cp -f $RICTY_HOME/share/fonts/Ricty*.ttf ~/Library/Fonts/
-  fc-cache -vf
-  fi
-fi
+# change default shell
+chsh -s /bin/zsh
+
 
 # set symlink at home
 # ln -sf `ghq root`/`ghq list autosetup`/Brewfile
-
+ghq get https://github.com/tkclimb/autosetup.git
 echo "Setup done!! Please remove this directory."
