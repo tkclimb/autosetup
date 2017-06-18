@@ -28,10 +28,11 @@ pyenv global python2 python3
 pyenv rehash
 
 
-# TK_RUBY_VERSION=2.3.1
-# rbenv install $TK_RUBY_VERSION
-# rbenv global $TK_RUBY_VERSION
-# rbenv rehash
+# rbenv
+TK_RUBY_VERSION=2.3.4
+rbenv install $TK_RUBY_VERSION
+rbenv global $TK_RUBY_VERSION
+rbenv rehash
 
 
 # change default shell
