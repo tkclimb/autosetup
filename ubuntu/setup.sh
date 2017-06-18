@@ -1,10 +1,10 @@
-# key board layout
-# sudo dpkg-reconfigure keyboard-configuration
+# set env
+export TK_PLATFORM=linux-ubuntu
+export TK_AUTOSETUP_ROOT="$(cd "$(dirname $1)/.." && pwd)"
 
 sudo apt update -y
 
 sudo apt install -y \
-  zsh \
   ssh \
   make \
   build-essential \
@@ -19,33 +19,14 @@ sudo apt install -y \
   libncurses5-dev \
   xz-utils \
   tk-dev \
-  golang \
   exfat-fuse \
   exfat-utils \
 
 
-# pyenv
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-# pyenv virtualenv
-git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
-eval "$(pyenv virtualenv-init -)"
+source $TK_AUTOSETUP_ROOT/share/pyenv.setup.sh
+source $TK_AUTOSETUP_ROOT/share/rbenv.setup.sh
+source $TK_AUTOSETUP_ROOT/share/ag.setup.sh
 
 
-#rbenv
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-export RBENV_ROOT="$HOME/.rbenv"
-export PATH="$RBENV_ROOT/bin:$PATH"
-eval "$(rbenv init -)"
+echo "Setup done!! Please remove autosetup."
 
-# ruby-build
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-
-
-# ghq
-export GOPATH=$HOME/go
-export PATH="$GOPATH/bin:$PATH"
-go get github.com/motemen/ghq
