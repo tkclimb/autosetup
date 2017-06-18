@@ -1,5 +1,5 @@
 # key board layout
-sudo dpkg-reconfigure keyboard-configuration
+# sudo dpkg-reconfigure keyboard-configuration
 
 sudo apt update -y
 
@@ -20,6 +20,8 @@ sudo apt install -y \
   xz-utils \
   tk-dev \
   golang \
+  exfat-fuse \
+  exfat-utils \
 
 # pyenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv

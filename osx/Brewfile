@@ -4,12 +4,13 @@ tap 'caskroom/cask'
 tap 'homebrew/services'
 tap 'beeftornado/rmtree'
 tap 'neovim/neovim'
+tap 'homebrew/fuse'
 
 # Desktop Application
 cask 'google-japanese-ime'
 cask 'google-chrome'
-cask 'google-drive'
 cask 'google-photos-backup'
+cask 'osxfuse'
 cask 'avira-antivirus'
 cask 'skim'
 cask 'vlc'
@@ -33,6 +34,8 @@ cask 'virtualbox-extension-pack'
 cask 'vagrant'
 cask 'parallels-desktop'
 cask 'qbittorrent'
+cask 'karabiner-elements'
+cask 'forklift'
 
 # Appstore
 mas '1Password', id: 443987910
@@ -56,3 +59,4 @@ brew 'reattach-to-user-namespace'
 brew 'neovim'
 brew 'ag'
 brew 'wget'
+brew 'ext4fuse'
