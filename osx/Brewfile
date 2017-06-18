@@ -2,36 +2,32 @@ cask_args appdir: '/Applications'
 
 tap 'caskroom/cask'
 tap 'homebrew/services'
-tap 'beeftornado/rmtree'
-tap 'neovim/neovim'
 
 # Desktop Application
 cask 'google-japanese-ime'
 cask 'google-chrome'
 cask 'google-photos-backup'
-cask 'osxfuse'
 cask 'avira-antivirus'
+cask 'alfred'
+cask 'bettertouchtool'
+cask 'contexts'
+cask 'iterm2'
+cask 'karabiner-elements'
+cask 'forklift'
+cask 'dash'
 cask 'skim'
 cask 'vlc'
-cask 'contexts'
-cask 'alfred'
 cask 'slack'
 cask 'the-unarchiver'
 cask 'insomniax'
 cask 'appcleaner'
-cask 'hyperswitch'
 cask 'imageoptim'
 cask 'franz'
 cask 'dropbox'
 cask 'kindle'
-cask 'dash'
 cask 'xquartz'
-cask 'bettertouchtool'
-cask 'iterm2'
 cask 'parallels-desktop'
-cask 'qbittorrent'
-cask 'karabiner-elements'
-cask 'forklift'
+cask 'sketch'
 
 # Appstore
 mas '1Password', id: 443987910
@@ -46,8 +42,4 @@ mas 'Instant Translate', id: 1005088137
 
 
 # Normal brew
-brew 'tmux'
-brew 'reattach-to-user-namespace'
-brew 'neovim'
-brew 'ag'
 brew 'wget'
