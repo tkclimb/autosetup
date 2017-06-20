@@ -1,6 +1,6 @@
 # set env
 export TK_PLATFORM=linux-ubuntu
-export TK_AUTOSETUP_ROOT="$(cd "$(dirname $1)/.." && pwd)"
+export TK_AUTOSETUP_ROOT="$(cd $(dirname \"$1\")/.. && pwd)"
 
 sudo apt update -y
 
@@ -25,6 +25,7 @@ sudo apt install -y \
 
 source $TK_AUTOSETUP_ROOT/share/pyenv.setup.sh
 source $TK_AUTOSETUP_ROOT/share/rbenv.setup.sh
+source $TK_AUTOSETUP_ROOT/share/ghq.setup.sh
 source $TK_AUTOSETUP_ROOT/share/ag.setup.sh
 
 
