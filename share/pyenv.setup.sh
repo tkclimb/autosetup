@@ -1,8 +1,8 @@
-if [ $TK_PLATFORM == darwin ]; then
+if [ "$TK_PLATFORM" == "darwin" ]; then
   brew install pyenv
   brew install pyenv-virtualenv
 
-elif [ $TK_PLATFORM == linux-ubuntu ]; then
+elif [ "$TK_PLATFORM" == "linux-ubuntu" ]; then
   # pyenv
   git clone https://github.com/pyenv/pyenv.git ~/.pyenv
   export PYENV_ROOT="$HOME/.pyenv"

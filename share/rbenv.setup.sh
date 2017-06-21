@@ -1,7 +1,7 @@
-if [ $TK_PLATFORM == darwin ]; then
+if [ "$TK_PLATFORM" == "darwin" ]; then
   brew install rbenv
 
-elif [ $TK_PLATFORM == linux-ubuntu ]; then
+elif [ "$TK_PLATFORM" == "linux-ubuntu" ]; then
   #rbenv
   git clone https://github.com/rbenv/rbenv.git ~/.rbenv
   export RBENV_ROOT="$HOME/.rbenv"

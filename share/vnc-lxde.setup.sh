@@ -1,7 +1,7 @@
-if [ $TK_PLATFORM == darwin ]; then
+if [ "$TK_PLATFORM" == "darwin" ]; then
   brew install vnc-viewer
 
-elif [ $TK_PLATFORM == linux-ubuntu ]; then
+elif [ "$TK_PLATFORM" == "linux-ubuntu" ]; then
   sudo apt install -y xfce4 xfce4-goodies
   sudo apt install tightvncserver
 

@@ -1,8 +1,8 @@
-if [ $TK_PLATFORM == darwin ]; then
+if [ "$TK_PLATFORM" == "darwin" ]; then
   brew install tmux
   brew install reattach-to-user-namespace
 
-elif [ $TK_PLATFORM == linux-ubuntu ]; then
+elif [ "$TK_PLATFORM" == "linux-ubuntu" ]; then
   sudo apt-get install -y \
     automake \
     libevent-dev \
@@ -16,13 +16,9 @@ elif [ $TK_PLATFORM == linux-ubuntu ]; then
 
   # checkout latest tag
   git checkout $(git tag | sort -V | tail -n 1)
-
   sh autogen.sh
-
   ./configure
-
   make -j4
-
   sudo make install
 
 fi
