@@ -15,8 +15,8 @@ elif [ "$TK_PLATFORM" == "linux-ubuntu" ]; then
 
 fi
 
-TK_PYTHON2_VERSION=2.7.13
-TK_PYTHON3_VERSION=3.5.3
+TK_PYTHON2_VERSION=2.7.15
+TK_PYTHON3_VERSION=3.6.3
 pyenv install $TK_PYTHON2_VERSION
 pyenv install $TK_PYTHON3_VERSION
 pyenv virtualenv $TK_PYTHON2_VERSION python2
