@@ -1,0 +1,22 @@
+cask_args appdir: "/Applications"
+cask "google-chrome"
+mas "1Password", id: 443987910
+git
+pyenv
+pyenv-virtualenv
+rbenv
+zsh
+tmux
+reattach-to-user-namespace
+ghq
+wget
+neovim
+llvm
+ripgrep
+the_silver_searcher
+cmake
+ninja
+rust
+haskell-stack
+sbt
+minicom
