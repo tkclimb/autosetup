@@ -7,7 +7,6 @@ cask "dropbox"
 cask "alfred"
 cask "karabiner-elements"
 cask "bettertouchtool"
-cask "popclip"
 cask "parallels"
 cask "docker"
 cask "dash"
@@ -22,13 +21,20 @@ cask "franz"
 cask "kindle"
 cask "skim"
 cask "gyazo"
+cask "xquartz"
+cask "inkscape"
 cask "sourcetrail"
+cask "sourcetree"
+cask "insomniax"
+cask "yed"
+cask "krita"
 
 mas "1Password", id: 443987910
+mas "PopClip", id: 445189367
 mas "LINE", id: 539883307
 mas "Quiver", id: 866773894
-mas "Fantastical 2", id: 975937182  
-mas "Mate: Universal Tab Translator", id: 1005088137  
+mas "Fantastical 2", id: 975937182
+mas "Mate: Universal Tab Translator", id: 1005088137
 
 brew "git"
 brew "pyenv"
@@ -40,7 +46,10 @@ brew "reattach-to-user-namespace"
 brew "ghq"
 brew "wget"
 brew "neovim"
+brew "gcc"
+brew "binutils"
 brew "llvm"
+brew "nasm"
 brew "ripgrep"
 brew "the_silver_searcher"
 brew "cmake"
@@ -49,10 +58,11 @@ brew "ninja"
 brew "boost"
 brew "flex"
 brew "bison"
-brew "rustup-init"
 brew "haskell-stack"
+brew "ghc"
 brew "sbt"
 brew "minicom"
+brew "bear"
 
 # for pyenv 
 brew "openssl"
@@ -60,4 +70,3 @@ brew "readline"
 brew "sqlite3"
 brew "xz" 
 brew "zlib"
-
