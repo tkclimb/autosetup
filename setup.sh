@@ -10,7 +10,7 @@ if [[ "$AS_PLATFORM" == "linux-gnu" ]]; then
   AS_BREW_DIR=/home/linuxbrew/.linuxbrew
   if [ ! -e "$AS_BREW_DIR" ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-    export PATH="$AS_BREW_DIR:$PATH/bin"
+    export PATH="$AS_BREW_DIR/bin:$PATH"
   fi
 
 elif [[ "$AS_PLATFORM" == "darwin"* ]]; then
@@ -21,29 +21,17 @@ elif [[ "$AS_PLATFORM" == "darwin"* ]]; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
 
-else; then
+else
   exit
 fi
 
 # install basic packages
 if [[ "$AS_PLATFORM" == "linux-gnu" ]]; then
-  sudo apt install -y \
-    ssh \
-    make \
-    build-essential \
-    libssl-dev \
-    zlib1g-dev \
-    libbz2-dev \
-    libreadline-dev \
-    libsqlite3-dev \
-    wget \
-    curl \
-    llvm \
-    libncurses5-dev \
-    xz-utils \
-    tk-dev \
-    exfat-fuse \
-    exfat-utils \
+  # for pyenv
+  sudo apt install -y --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+
+  # for rbenv
+  sudo apt install -y autoconf bison libssl-dev libyaml-dev libreadline6-dev  libffi-dev libgdbm5 libgdbm-dev
 
   brew bundle --file=./Brewfile.ubuntu
 
