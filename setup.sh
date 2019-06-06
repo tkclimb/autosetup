@@ -7,8 +7,10 @@ if [[ "$AS_PLATFORM" == "linux-gnu" ]]; then
   # sudo apt update -y
   # sudo apt upgrade -y
 
-  if [ ! -e /home/linuxbrew/.linuxbrew ]; then
+  AS_BREW_DIR=/home/linuxbrew/.linuxbrew
+  if [ ! -e "$AS_BREW_DIR" ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+    export PATH="$AS_BREW_DIR:$PATH/bin"
   fi
 
 elif [[ "$AS_PLATFORM" == "darwin"* ]]; then
